@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydrate Bestie</title>
+
+  <!-- Elegant heading font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Slides -->
+  <div class="slides">
+
+    <!-- Slide 1 -->
+    <section class="slide hero">
+      <div class="content">
+        <p class="badge">Hydration Reminder</p>
+        <h1>Drink Water<br><span>Hydrate. Glow. Repeat.</span></h1>
+        <p class="sub">
+          A simple daily ritual for better skin, energy and balance.
+        </p>
+        <button class="primary" id="startBtn">Start Tracking</button>
+      </div>
+
+      <div id="blurOverlay"></div>
+
+      <img src="anjenli.png" id="robot" alt="robot">
+
+    </section>
+
+
+    <!-- Popup -->
+
+    <div id="robotMenu">
+      <div class="hydration-note">
+        <p>Hey lovies, this is AnJenLi 🌿</p>
+        <p class="note">Jenny says — savor this moment, for life is a fleeting melody.<br>
+          Even small steps matter, and today is yours to embrace fully.</p>
+      </div>
+    </div>
+
+    <!-- flood container -->
+    <div id="flood"></div>
+
+    <script src="script.js"></script>
+    <div id="waterOverlay">
+      <div class="wave"></div>
+    </div>
+
+
+
+    <!--slide 2-->
+    <section class="slide importance" id="slide2">
+      <div class="content">
+        <h1>Why Hydration Is Your<br><span>Secret Superpower</span></h1>
+
+        <ul class="points">
+          <li>✨ Keeps skin naturally fresh and balanced</li>
+          <li>🧠 Supports focus and mental clarity</li>
+          <li>🌸 Reduces bloating and hormonal discomfort</li>
+          <li>💪 Maintains energy levels throughout the day</li>
+          <li>🩺 Supports kidney and digestive health</li>
+          <li>💇‍♀️ Improves hair strength and scalp health</li>
+          <li>🩷 Helps regulate mood and overall wellness</li>
+        </ul>
+
+        <div class="btn-group">
+          <div class="btn-group">
+            <button class="primary" id="understoodBtn">Yes, I Get It</button>
+
+
+            <a href="https://www.healthline.com/health/food-nutrition/why-is-water-important#saliva" target="_blank"
+              class="primary link-btn">
+              Learn More
+            </a>
+          </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!----slide 3 -->
+    <section class="slide tracker" id="slide3">
+      <div class="content">
+        <div class="hamburger" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <h1>Today’s Hydration<br><span>Tracker</span></h1>
+
+        <div class="time-display" id="currentTime"></div>
+
+
+        <div class="progress-wrapper">
+          <svg width="200" height="200">
+            <circle cx="100" cy="100" r="85" class="bg-circle" />
+            <circle cx="100" cy="100" r="85" class="progress-circle" id="progressCircle" />
+          </svg>
+          <div class="progress-text">
+            <div>
+              <div><span id="count">0</span>/9</div>
+              <div id="percentageText" style="font-size:14px; opacity:0.6;">0%</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="tracker-buttons">
+          <button class="primary" id="addWater">+ 1 Glass</button>
+          <button class="ghost" id="resetWater">Reset</button>
+        </div>
+        <div id="streak" style="font-size:14px; opacity:0.7; margin-top:8px;">🔥 Streak: 0 days</div>
+
+        <div id="dailyGoalText" style="margin-top:6px; font-size:14px; opacity:0.6;">
+          🎯 Daily Goal: 9 Glasses (2250 ml/2.25 L)
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <h3>Water Log</h3>
+      <ul id="logList"></ul>
+    </div>
+
+
+    <!----slide 4-->
+    <section class="slide goal" id="slide4">
+      <div class="content">
+        <div class="typing-container">
+          <h1 id="typingText"></h1>
+          <div class="subtitle">Move to feel it</div>
+        </div>
+        <img src="thermo.png" id="sunThermo" alt="Sun Thermometer" />
+        <div id="iceEffect"></div>
+
+      </div>
+    </section>
+
+    <section class="slide goal" id="slide5">
+      <div class="press-container">
+        <p class="press-text">PRESS & HOLD</p>
+
+        <div class="hug-wrapper">
+          <div class="fill-left"></div>
+          <div class="fill-right"></div>
+
+          <div class="heart-circle">
+            ❤
+          </div>
+        </div>
+
+        <div class="next-text" id="nextText">
+          <p>Every day is a story. Close today’s chapter with a smile.</p>
+          <p>Good night 🌙</p>
+        </div>
+
+      </div>
+    </section>
+
+    <audio id="clickSound" src="click.mp3"></audio>
+    <audio id="waterSound" src="water.mp3"></audio>
+
+
+
+
+</body>
+
+</html>
